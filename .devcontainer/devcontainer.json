@@ -1,0 +1,12 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "runArgs": ["--device=/dev/net/tun"],
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {},
+    "ghcr.io/schlich/devcontainer-features/powerlevel10k:1": {},
+    "ghcr.io/devcontainers-contrib/features/neovim-homebrew:1": {},
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/tailscale/codespace/tailscale": {}
+  },
+  "postStartCommand": "tailscale up --auth-key $TS_AUTH_KEY --accept-routes"
+}
